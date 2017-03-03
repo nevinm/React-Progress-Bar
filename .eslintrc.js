@@ -1,39 +1,33 @@
 module.exports = {
-    "extends": ["standard", "plugin:react/recommended"],
-    "plugins": [
-        "standard",
-        "promise",
-        "react"
-    ],
+   "parser": "babel-eslint",
+    "extends": "eslint-config-airbnb",
     "env": {
-        "browser": true,
-        "node": true
+      "browser": true,
+      "node": true,
+      "mocha": true
     },
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaVersion": 5,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true,
-            "experimentalObjectRestSpread": true
-        }
+    rules: {
+      "import/extensions": [2, "never"],
+      "import/no-extraneous-dependencies": 0,
+      "import/no-unresolved": 0,
+      "react/prefer-stateless-function": [0]
     },
+    "plugins": [
+      "import"
+    ],
     "settings": {
-        "react": {
-            "pragma": "React",  // Pragma to use, default to "React"
-            "version": "15.0" // React version, default to the latest React stable release
-        }
+      "import/parser": "babel-eslint",
+      "import/resolve": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
     },
-    "rules": {
-        "semi": ["error", "always"],
-        "quotes": ["error", "double"],
-        "indent": ["error", 4],
-        "no-unused-vars": 0,
-        "react/jsx-uses-vars": "error",
-        "eol-last": 0,
-        "no-class-assign": 0,
-        "react/prop-types": 0,
-        "react/react-in-jsx-scope": 0,
-        "react/no-danger": 0
+    "globals": {
+      "__DEVELOPMENT__": true,
+      "__CLIENT__": true,
+      "__SERVER__": true,
+      "__DISABLE_SSR__": true,
+      "__DEVTOOLS__": true,
+      "socket": true,
+      "webpackIsomorphicTools": true
     }
 };
