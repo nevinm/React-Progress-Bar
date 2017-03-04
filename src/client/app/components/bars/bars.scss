@@ -1,3 +1,9 @@
+@mixin defaultBar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .barContainer{
   display: flex;
   border: 1px solid grey;
@@ -7,15 +13,18 @@
   height: 50px;
 
   .solidBar{
-    display: flex;
-    background-color: yellow;
-    height: 100%;
-    align-items: center;
+    @include defaultBar;
+    background-color: #8ccad4;
+  }
+
+  .redBar{
+    @include defaultBar;
+    background-color: red;
   }
 
   .actualValue{
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0);  
+    transform: translate(-50%, 0);
   }
 }

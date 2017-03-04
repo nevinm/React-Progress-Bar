@@ -27,10 +27,12 @@ export default class Bars extends Component {
 
   render() {
     const { initialValue } = this.props;
+    const percentage = this.calculatePercentage();
+    const percentageBarClass = percentage > 100 ? styles.redBar : styles.solidBar;
 
     return (
       <div className={styles.barContainer}>
-        <div className={styles.solidBar} style={{ width: `${this.calculatePercentage()}%` }} />
+        <div className={percentageBarClass} style={{ width: `${percentage}%` }} />
         <p className={styles.actualValue}>{initialValue}%</p>
       </div>
     );
