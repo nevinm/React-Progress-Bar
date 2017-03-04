@@ -1,3 +1,45 @@
-.random_2Vu {
-  background-color: grey;
+.progressBarContainer_3vP {
+  display: block;
+}
+.barContainer_2le {
+  display: flex;
+  border: 1px solid grey;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 50px;
+}
+
+.barContainer_2le .solidBar_2Xh {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: #8ccad4;
+}
+
+.barContainer_2le .redBar_35f {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: red;
+}
+
+.barContainer_2le .actualValue_1pt {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.controlPanelContainer_X7q {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.controlPanelContainer_X7q .selectBar_17_ {
+  width: 50%;
+  margin: 0;
+}
+
+.controlPanelContainer_X7q .buttons_2Fu {
+  margin-left: 10px;
 }
