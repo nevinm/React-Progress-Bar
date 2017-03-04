@@ -17,8 +17,10 @@ export default class ControlPanel extends Component {
 
   renderSelectOptions() {
     const { buttonData } = this.props;
-    return React.Children.map(buttonData.buttons, (button, index) =>
-      <option value={`#progress${index}`}>{`#progress${index}`}</option>);
+    return React.Children.map(buttonData.bars, (bar, index) => {
+      const naming = `#progress${index + 1}`;
+      return <option value={naming}>{naming}</option>;
+    });
   }
 
   renderButtons() {

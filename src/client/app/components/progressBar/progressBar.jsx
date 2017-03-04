@@ -30,10 +30,8 @@ export default class ProgressBar extends Component {
     onClick: () => {},
   };
 
-  renderBars() {
-    return React.Children.map(dummyData.bars, (bar, index) =>
-      <Bars initialValue={bar} key={index} />);
-  }
+  renderBars = () => React.Children.map(dummyData.bars, (bar, index) =>
+    <Bars initialValue={bar} key={index} />);
 
   render() {
     return (
