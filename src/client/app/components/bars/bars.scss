@@ -1,3 +1,21 @@
 .barContainer{
   display: flex;
+  border: 1px solid grey;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 50px;
+
+  .solidBar{
+    display: flex;
+    background-color: yellow;
+    height: 100%;
+    align-items: center;
+  }
+
+  .actualValue{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);  
+  }
 }

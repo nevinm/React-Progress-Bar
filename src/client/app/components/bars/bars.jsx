@@ -3,7 +3,7 @@ import styles from './bars.scss';
 
 const { number } = PropTypes;
 
-export default class Bar extends Component {
+export default class Bars extends Component {
   static propTypes = {
     barPercentage: number,
     limit: number, // Total numerical value to attain 100%
@@ -15,11 +15,12 @@ export default class Bar extends Component {
   };
 
   render() {
-    const barPercentage = this.props;
+    const { barPercentage } = this.props;
 
     return (
       <div className={styles.barContainer}>
-        <p>{barPercentage}</p>
+        <div className={styles.solidBar} style={{ width: `${barPercentage}%` }} />
+        <p className={styles.actualValue}>{barPercentage}%</p>
       </div>
     );
   }
