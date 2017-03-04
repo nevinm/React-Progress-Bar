@@ -2,8 +2,8 @@ import {render} from "react-dom";
 import React from 'react';
 import Container from "./components/container/container";
 import AppNavbar from "./components/navbar/appnavbar";
+import ProgressBar from "./components/progressBar/progressBar";
 import PageHeader from "react-bootstrap/lib/PageHeader";
-import Bars from "./components/bars/bars";
 
 const App = () => (
   <div>
@@ -13,9 +13,7 @@ const App = () => (
       <p>A ReactJS Progress Bar project that supports JavaScript ES7
          transpilation to ES5 through Babel, linting with ESLint,
        and bundling via Webpack.</p>
-      <Bars barPercentage={25} />
-      <Bars barPercentage={50} />
-      <Bars barPercentage={75} />
+      <ProgressBar />
     </Container>
   </div>
 );

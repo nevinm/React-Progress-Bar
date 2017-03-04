@@ -17,8 +17,6 @@ const sassLoaderQuery = {
   sourceMap: true,
 };
 
-console.log(BUILD_DIR);
-
 module.exports = {
     entry: APP_DIR + "/app.jsx",
     output: {

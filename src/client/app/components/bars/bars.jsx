@@ -5,22 +5,33 @@ const { number } = PropTypes;
 
 export default class Bars extends Component {
   static propTypes = {
-    barPercentage: number,
+    initialValue: number,
+    updateBarValue: number,
     limit: number, // Total numerical value to attain 100%
   };
 
   static defaultProps = {
-    barPercentage: 0,
     limit: 100,
+    initialValue: 0,
+    updateBarValue: 0,
   };
 
+  state = {
+    barPercentage: 0,
+  }
+
+  calculatePercentage = () => {
+    const { initialValue, limit, updateBarValue } = this.props;
+    return ((initialValue + updateBarValue) / limit) * 100;
+  }
+
   render() {
-    const { barPercentage } = this.props;
+    const { initialValue } = this.props;
 
     return (
       <div className={styles.barContainer}>
-        <div className={styles.solidBar} style={{ width: `${barPercentage}%` }} />
-        <p className={styles.actualValue}>{barPercentage}%</p>
+        <div className={styles.solidBar} style={{ width: `${this.calculatePercentage()}%` }} />
+        <p className={styles.actualValue}>{initialValue}%</p>
       </div>
     );
   }
