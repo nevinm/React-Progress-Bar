@@ -1,13 +1,10 @@
 import * as types from '../actions/actionTypes';
-
-const initialState = {
-  bars: {},
-};
+import initialState from './initialState';
 
 export default function (state = initialState, action) {
   switch (action.type) {
     case types.LOAD_BAR_DATA_SUCCESS:
-      return action.bars;
+      return { ...state.progressBarReducer, ...action.data.data };
 
     default:
       return state;

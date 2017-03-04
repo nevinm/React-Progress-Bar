@@ -1,43 +1,49 @@
 import React, { PropTypes, Component } from 'react';
+import { connect } from 'react-redux';
 import styles from './progressBar.scss';
 import Bars from '../bars/bars';
 import ControlPanel from '../controlPanel/controlPanel';
+import * as barActions from '../../redux/actions/barActions';
 
-const { number, func } = PropTypes;
-const dummyData = {
-  buttons: [
-    10,
-    38,
-    -13,
-    -18,
-  ],
-  bars: [
-    620,
-    45,
-    87,
-  ],
-  limit: 230,
-};
+const { number, func, object } = PropTypes;
 
+@connect(state => ({
+  requiredData: state.progressBarReducer,
+}), {
+  loadBarData: barActions.loadBarData,
+})
 export default class ProgressBar extends Component {
   static propTypes = {
     value: number,
     onClick: func,
+    requiredData: object,
   };
 
   static defaultProps = {
     value: 0,
     onClick: () => {},
+    requiredData: {},
   };
 
-  renderBars = () => React.Children.map(dummyData.bars, (bar, index) =>
+  componentWillReceiveProps() {
+    console.log('componenWillReceiveProps');
+  }
+
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
+  }
+
+  renderBars = () => React.Children.map(this.props.requiredData.bars, (bar, index) =>
     <Bars initialValue={bar} key={index} />);
 
   render() {
+    const { requiredData } = this.props;
+    console.log('inside proge render');
+
     return (
       <div className={styles.progressBarContainer}>
         {this.renderBars()}
-        <ControlPanel buttonData={dummyData} />
+        <ControlPanel buttonData={requiredData} />
       </div>
     );
   }
