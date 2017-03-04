@@ -1,9 +1,27 @@
-import {render} from "react-dom";
+import { render } from 'react-dom';
 import React from 'react';
-import Container from "./components/container/container";
-import AppNavbar from "./components/navbar/appnavbar";
-import ProgressBar from "./components/progressBar/progressBar";
-import PageHeader from "react-bootstrap/lib/PageHeader";
+import PageHeader from 'react-bootstrap/lib/PageHeader';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+import { Router, browserHistory } from 'react-router';
+import rootReducer from './redux/reducers/rootReducer';
+
+import Container from './components/container/container';
+import AppNavbar from './components/navbar/appnavbar';
+import ProgressBar from './components/progressBar/progressBar';
+
+const composeEnhancers =
+  process.env.NODE_ENV !== 'production' &&
+  typeof window === 'object' &&
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+  // Specify extension’s options like name, actionsBlacklist, actionsCreators or immutablejs support
+}) : compose;
+
+const enhancer = composeEnhancers(applyMiddleware(thunk));
+
+const store = createStore(rootReducer, enhancer);
 
 const App = () => (
   <div>
@@ -18,4 +36,7 @@ const App = () => (
   </div>
 );
 
-render(<App />, document.getElementById('app'));
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>, document.getElementById('app'));
