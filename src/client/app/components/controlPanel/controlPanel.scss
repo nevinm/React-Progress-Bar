@@ -1,14 +1,19 @@
-.controlPanelContainer{
+.controlPanelContainer {
   display: flex;
   justify-content: space-between;
   padding: 15px 0;
 
-  .selectBar{
+  .selectBar {
     width: 50%;
     margin: 0;
   }
 
-  .buttons{
+  .buttons {
     margin-left: 2px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
   }
 }

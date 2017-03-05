@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { expect } from 'chai';
+import sinon from 'sinon';
 import Button from './button.jsx';
 
 describe('Button Component', () => {
@@ -16,5 +17,12 @@ describe('Button Component', () => {
     const wrapper = mount(<Button value={10} className="Test" />);
     expect(wrapper.props().className).to.equal('Test');
     expect(wrapper.props().value).to.equal(10);
+  });
+
+  it('Button Component onClick should work', () => {
+    const onClick = sinon.spy();
+    const wrapper = mount(<Button value={10} className="Test" onClick={onClick} />);
+    wrapper.find('.btn').simulate('click');
+    expect(onClick).to.have.property('callCount', 1);
   });
 });
