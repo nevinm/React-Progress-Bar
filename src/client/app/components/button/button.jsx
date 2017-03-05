@@ -11,6 +11,7 @@ export default class Button extends Component {
 
   static defaultProps = {
     value: 0,
+    className: '',
     onClick: () => {},
   };
 

@@ -10,7 +10,8 @@ module.exports = {
       "import/extensions": [2, "never"],
       "import/no-extraneous-dependencies": 0,
       "import/no-unresolved": 0,
-      "react/prefer-stateless-function": [0]
+      "react/prefer-stateless-function": [0],
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     },
     "plugins": [
       "import"

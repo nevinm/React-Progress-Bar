@@ -68,11 +68,11 @@ export default class ControlPanel extends Component {
         <select
           onChange={this.onBarChange}
           value={this.state.selectedBar}
-          className={`form-control ${styles.selectBar}`}
+          className={`form-control col-sm-6 col-xs-12 ${styles.selectBar}`}
         >
           {this.renderSelectOptions()}
         </select>
-        <div className={styles.buttonContainer}>
+        <div className={`col-sm-6  col-xs-12 ${styles.buttonContainer}`}>
           {this.renderButtons()}
         </div>
       </div>

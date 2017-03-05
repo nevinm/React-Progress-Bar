@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import styles from './bars.scss';
+import styles from './bar.scss';
 
 const { number } = PropTypes;
 

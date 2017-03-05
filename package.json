@@ -23,12 +23,17 @@
   "scripts": {
     "start": "webpack && webpack-dev-server --inline --hot --content-base src/client/public/",
     "build": "webpack",
-    "test": "./node_modules/karma/bin/karma start"
+    "test": "npm run test:karma",
+    "test:base": "./node_modules/.bin/karma start",
+    "test:karma": "npm run test:base -- --single-run",
+    "test:watch": "npm run test:base -- --auto-watch"
   },
   "dependencies": {
     "axios": "^0.13.1",
     "babel-eslint": "^6.1.2",
     "babel-polyfill": "^6.9.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.11.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^4.5.0",
     "react": "^15.2.1",
@@ -52,6 +57,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.26.2",
+    "enzyme": "^2.3.0",
     "eslint": "3.11.0",
     "eslint-config-airbnb": "13.0.0",
     "eslint-plugin-babel": "4.0.0",
@@ -59,7 +65,10 @@
     "eslint-plugin-jsx-a11y": "2.2.3",
     "eslint-plugin-react": "6.7.1",
     "expect.js": "^0.3.1",
+    "expect": "^1.14.0",
+    "expect-jsx": "^2.3.0",
     "istanbul-instrumenter-loader": "^2.0.0",
+    "isomorphic-style-loader": "0.0.12",
     "karma": "^1.5.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
