@@ -1,3 +1,4 @@
+$lightBlue: #8ccad4;
 @mixin defaultBar {
   display: flex;
   align-items: center;
@@ -8,7 +9,7 @@
   transition: width 0.5s ease-in-out;
 }
 
-.barContainer{
+.barContainer {
   display: flex;
   border: 1px solid grey;
   align-items: center;
@@ -16,17 +17,17 @@
   margin-top: 5px;
   height: 50px;
 
-  .solidBar{
+  .solidBar {
     @include defaultBar;
-    background-color: #8ccad4;
+    background-color: $lightBlue;
   }
 
-  .redBar{
+  .redBar {
     @include defaultBar;
     background-color: red;
   }
 
-  .actualValue{
+  .actualValue {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);

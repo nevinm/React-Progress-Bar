@@ -4,7 +4,6 @@ import PageHeader from 'react-bootstrap/lib/PageHeader';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
 import rootReducer from './redux/reducers/rootReducers';
 import { loadBarData } from './redux/actions/barActions';
 
