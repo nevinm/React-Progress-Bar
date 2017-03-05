@@ -5,7 +5,7 @@ import Bars from '../bars/bars';
 import ControlPanel from '../controlPanel/controlPanel';
 import * as barActions from '../../redux/actions/barActions';
 
-const { number, func, object } = PropTypes;
+const { number, func, shape, array } = PropTypes;
 
 @connect(state => ({
   requiredData: state.progressBarReducer,
@@ -16,7 +16,11 @@ export default class ProgressBar extends Component {
   static propTypes = {
     value: number,
     onClick: func,
-    requiredData: object,
+    requiredData: shape({
+      bars: array,
+      buttons: array,
+      limit: number,
+    }),
   };
 
   static defaultProps = {
@@ -25,20 +29,11 @@ export default class ProgressBar extends Component {
     requiredData: {},
   };
 
-  componentWillReceiveProps() {
-    console.log('componenWillReceiveProps');
-  }
-
-  componentWillUpdate() {
-    console.log('componentWillUpdate');
-  }
-
   renderBars = () => React.Children.map(this.props.requiredData.bars, (bar, index) =>
     <Bars initialValue={bar} key={index} />);
 
   render() {
     const { requiredData } = this.props;
-    console.log('inside proge render');
 
     return (
       <div className={styles.progressBarContainer}>

@@ -2,11 +2,13 @@ import React, { PropTypes, Component } from 'react';
 import styles from './controlPanel.scss';
 import Button from '../button/button';
 
-const { object, func } = PropTypes;
+const { shape, func, array } = PropTypes;
 
 export default class ControlPanel extends Component {
   static propTypes = {
-    buttonData: object,
+    buttonData: shape({
+      bars: array,
+    }),
     onClick: func,
   };
 
