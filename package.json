@@ -19,7 +19,6 @@
     "type": "git",
     "url": "https://github.com/nevinm/React-Progress-Bar"
   },
-  "license": "MIT",
   "scripts": {
     "start": "webpack && webpack-dev-server --inline --hot --content-base",
     "build": "webpack",

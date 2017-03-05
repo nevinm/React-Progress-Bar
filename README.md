@@ -20,5 +20,8 @@ Clone or download the repo.
 1. At the command prompt, enter `npm start` to start the Webpack Dev Server with Hot Module Replacement.
 1. Point your browser to `localhost:8080`. When you make changes to the code, Babel will transpile your code, Webpack will build the JavaScript bundle and Webpack Dev Server will refresh the browser.
 
+## Test
+At the command prompt, enter `npm run test` to start the test cases.
+
 ## Note
 If you cloned this repo (as opposed to having downloaded it) you should delete the `.git` folder (e.g. `rm -rf .git`) as you don't really want to track this repo. You can then, of course, create a new git repo to track your own work.
