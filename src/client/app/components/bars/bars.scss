@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   height: 100%;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .barContainer{
