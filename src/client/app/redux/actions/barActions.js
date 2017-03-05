@@ -15,3 +15,7 @@ export function loadBarData() {
     });
   };
 }
+
+export function updateBarData(buttonInfo) {
+  return { type: types.UPDATE_BAR_DATA_SUCCESS, buttonInfo };
+}
