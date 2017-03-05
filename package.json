@@ -1,5 +1,5 @@
 {
-  "name": "@jeffreyschwartz/react-quickstart",
+  "name": "@nevinm/React-Progress-Bar",
   "version": "1.0.0",
   "description": "React Quickstart with Webpack and Babel",
   "main": "''",
@@ -14,14 +14,14 @@
     "Guide",
     "Template"
   ],
-  "author": "Jeffrey Schwartz",
+  "author": "Nevin Madhukar K",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jeffschwartz/react-quickstart"
+    "url": "https://github.com/nevinm/React-Progress-Bar"
   },
   "license": "MIT",
   "scripts": {
-    "start": "webpack && webpack-dev-server --inline --hot --content-base src/client/public/",
+    "start": "webpack && webpack-dev-server --inline --hot --content-base",
     "build": "webpack",
     "test": "npm run test:karma",
     "test:base": "./node_modules/.bin/karma start",
