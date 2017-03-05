@@ -1,0 +1,58 @@
+.progressBarContainer_3vP {
+  display: block;
+}
+.barContainer_mYJ {
+  display: flex;
+  border: 1px solid grey;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 5px;
+  height: 50px;
+}
+
+.barContainer_mYJ .solidBar_3d0 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  background-color: #8ccad4;
+}
+
+.barContainer_mYJ .redBar_3OS {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  background-color: red;
+}
+
+.barContainer_mYJ .actualValue_5Kw {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.controlPanelContainer_X7q {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.controlPanelContainer_X7q .selectBar_17_ {
+  width: 50%;
+  margin: 0;
+}
+
+.controlPanelContainer_X7q .buttons_2Fu {
+  margin-left: 2px;
+}
+
+.controlPanelContainer_X7q .buttonContainer_cfL {
+  display: flex;
+  justify-content: center;
+}

@@ -1,4 +1,4 @@
-const endPoint = 'http://pb-api.herokuapp.com/bars';
+const endPoint = 'https://pb-api.herokuapp.com/bars';
 const axios = require('axios');
 
 class barsApi {

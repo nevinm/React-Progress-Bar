@@ -1,5 +1,3 @@
 node_modules
-src/client/public/app.bundle.js
-src/client/public/styles.css
 npm-debug.log
 coverage
