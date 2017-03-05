@@ -25474,7 +25474,8 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var endPoint = 'http://pb-api.herokuapp.com/bars';
+	// Changed http to https for ghpages.
+	var endPoint = 'https://pb-api.herokuapp.com/bars';
 	var axios = __webpack_require__(307);
 
 	var barsApi = function () {
